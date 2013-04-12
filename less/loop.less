@@ -1,0 +1,292 @@
+.panels {
+	border: 1px solid #e8ebed;
+	background: url('../images/bg-panel.png') repeat;
+	padding-bottom: 30px;
+	border-bottom: none;
+	margin-top: -40px;
+}
+.panel {
+	width: 755px;
+	margin: auto;
+	padding-top: 40px;
+	hr {
+		//width: 100%;
+		margin: auto;
+	}
+	h1 {
+		font-weight: 700;
+		font-family: 'PT Sans Narrow';
+		font-size: 34px;
+		color: #c2cb20;
+		margin: .5em;
+	}
+	h2 {
+		font-family: 'goth720b';
+		font-size: 20px;
+		color: #c61d23;
+		margin: 7px 0;
+	}
+}
+.seloImg{
+	position: absolute;
+	margin: -70px 0 0 465px;
+	z-index: 100;
+}
+.info {
+	float: left;
+	width: 175px;
+	margin-right: 25px;
+	.logoImg {
+		display: block;
+		width: 175px;
+		height: 135px;
+	}
+	.size {
+		color: #c2cb20;
+		font-size: 30px;
+		font-weight: 400;
+		font-family: 'PT Sans Narrow';
+		margin: 7px 0;
+		strong {
+			font-size: 700;
+			font-size: 45px;
+			font-family: 'goth720b';
+		}
+	}
+	.desc {
+		font-family: 'PT Sans Narrow';
+		font-size: 20px;
+		color: #c2cb20;
+		 	span.destaqueDescricao {
+			    color: #414042;
+			    font-family: 'PT Sans Narrow';
+			    font-size: 20px;
+		}
+	}
+}
+.slider {
+	float: left;
+	width: 550px;
+}
+.col1 {
+	width: 255px;
+	float: left;
+}
+.col2 {
+	width: 496px;
+	padding-right: 4px;
+	float: left;
+}
+.box1 {
+	position: relative;
+	width: 255px;
+	height: 116px;
+	background: url('../images/panel-chat.png');
+	margin-bottom: 4px;
+	a {
+		width: 122px;
+		height: 31px;
+		background-image: url('../images/panel-chat-btn.png');
+		position: absolute;
+		bottom: 24px;
+		right: 64px;
+	}
+}
+.box2 {
+	position: relative;
+	width: 255px;
+	height: 116px;
+	background: url('../images/panel-liga.png');
+	&>a {
+		width: 203px;
+		height: 31px;
+		background-image: url('../images/panel-liga-btn.png');
+		position: absolute;
+		bottom: 24px;
+		right: 26px;
+	}
+	.ligamos-voce{
+		padding-top:5px;
+		margin-left:8px;
+		width:100px;
+		text-align:left;
+		position:relative;
+			a .coluna, .etiqueta {
+			    margin-left:10px;
+			    margin-top:5px;
+			}
+	}
+	.ligamos-voce-agora {
+	    background: url('../images/fundo-ligamos-vc.png') no-repeat;
+	    width:188px;
+	    *width:214px;
+	    height:160px;
+	    *height:175px;
+	    border: none;
+	    padding:43px 13px 13px 13px;
+	    position:absolute;
+	    top:85px;
+	    right:10px;
+	    z-index:20;
+	    font-weight:normal;
+	    	.etiqueta{
+	    		line-height: 25px;
+    			color:#fff;
+	    	}
+	    	.valor input{
+	    		width: 84px; /*130px;*/
+			    height:23px;
+			    line-height:23px;
+			    background:#5794c2;
+			    margin-left:0;
+			    border:0;
+
+	    	}
+	    	.ligue-me a{
+	    		color:#fff000;
+			    font-size:11px;
+			    font-weight:normal;
+	    	}
+	    	p{
+	    		padding-top:10px;
+			    clear:both;
+			    color:#fff;
+			    font-size: 12px;
+			    font-family: Arial, 'PT Sans';
+	    	}
+	    	p.first{
+	    		padding-top: 0 !important;
+    			padding-bottom: 10px;
+	    	}
+	    	.sucesso h3 {
+			    font-weight:bold;
+			    color:#fff000;
+			    text-align:center;
+			    font-size:14px;
+			    margin:10px 0;
+			    font-family: Arial, 'PT Sans';
+			}
+			.sucesso p {
+			    text-align:center;
+			    font-family: Arial, 'PT Sans';
+			}
+	}
+}
+.box3 {
+	position: relative;
+	width: 496px;
+	height: 236px;
+	background: url('../images/panel-form.png');
+	input[type=submit] {
+		width: 122px;
+		height: 31px;
+		background-image: url('../images/panel-form-btn.png');
+		background-color: transparent;
+		position: absolute;
+		bottom: 24px;
+		right: 140px;
+		cursor: pointer;
+	}
+	.messagem {
+		width: 178px;
+		//margin: 60px 0 0 27px;
+		height: 140px;
+	}
+	.normal {
+		width: 234px;
+		margin: 0;
+		display: inline-block;
+		input {
+			height: 20px;
+			width: 230px;
+		}
+		&.nome {
+			margin-bottom: 20px;
+		}
+		&.email {
+			margin-bottom: 19px;
+		}
+		&.fone {
+			float: left;
+			text-align: center;
+		}
+		.ddd {
+			width: 46px;
+			margin-right: 21px;
+			margin-left: 1px;
+			float: left;
+		}
+		input.fone {
+			width:164px;
+			float: right
+
+		}
+	}
+	.c1 {
+		float: left;
+		width: 184px;
+		padding-top: 60px;
+		padding-left: 27px;
+	}
+	.c2 {
+		float: left;
+		width: 210px;
+		padding-top: 60px;
+		padding-left: 25px;
+	}
+	input, textarea {
+		resize:none;
+		border: none;
+		color: #999;
+
+	}
+}
+.sub-footer {
+	position: relative;
+	height: 40px;
+	float: left;
+	margin-top: 15px;
+	.endereco {
+		font-family: 'goth720b';
+		font-size: 16px;
+		color: #c61d23;
+		margin: 5px 0 10px 0;
+		display: inline-block;
+		width: 425px;
+		span {
+			display: inline-block;
+			font-family: 'goth720bt';
+		}
+	}
+	.gmap {
+		position: absolute;
+		display: block;
+		width: 142px;
+		height: 35px;
+		right: 182px;
+		top: 50%;
+		margin-top: -16px;
+		background-image: url('../images/panel-footer-mapa-btn.png');
+	}
+	.link {
+		position: absolute;
+		display: block;
+		width: 162px;
+		height: 35px;
+		right: 9px;
+		top: 50%;
+		margin-top: -16px;
+		background-image: url('../images/panel-footer-info-btn.png');
+	}
+}
+.ie, .mac.webkit{
+	.box3{
+		.normal{
+			input.fone{
+				width: 162px;
+				float: right;
+			}
+		}
+	}
+}
+

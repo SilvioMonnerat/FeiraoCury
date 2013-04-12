@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset=utf-8>
+        <meta name=description content="">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <title>Untitled</title>
+        <script>if(!window.log) {window.log = function() {log.history = log.history || [];log.history.push(arguments);if(this.console) {console.log(Array.prototype.slice.call(arguments));}};}</script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h2>test ajax</h2>
+
+        <form action="http://www.cury.net/_service/PopAtendimento.aspx" method="post" id="form-0">
+            <input type="hidden" name="CodEmpreendimento" value="52">
+            <div class="c1"><textarea name="mensagem" class="messagem validate[required,minSize[10]]" placeholder="Mensagem"></textarea></div>
+            <div class="c2">
+                <span class="normal nome"><input type="text" name="nome" class="validate[required,custom[onlyLetterSp],maxSize[100]]" placeholder="Nome"></span>
+                <span class="normal email"><input type="text" name="email" class="validate[required,custom[email],maxSize[100]]" placeholder="Email"></span>
+                <span class="normal fone"><input type="text" name="ddd" maxlength="2" minlength="2" class="ddd validate[required,custom[onlyNumberSp],maxSize[2],minSize[2]]" placeholder="DDD"><input type="text" name="tel" maxlength="9" minlength="8" class="fone validate[required,custom[onlyNumberSp],maxSize[9],minSize[8]]" placeholder="Telefone"></span>
+            </div>
+            <input type="submit" name="enviar" value="" class="btn" onclick="_gaq.push(['_trackEvent', 'principais', 'cliqueMensagem', String('jacarepagua'), parseInt('52')]);curName = 'jacarepagua'; curID = '52';">
+        </form>
+        <script>
+        /*$.ajax({
+	      url: "../_service/PopAtendimento.aspx",
+	      type: "post",
+	      //dataType : 'text',
+	      //accepts : '**',
+	      //crossDomain :  true,
+	      //contentType : 'application/x-www-form-urlencoded',
+	      data: 'CodEmpreendimento=00&nome=teste&email=samuel@cabanacriacao.com&ddd=21&tel=12345678&mensagem=teste cabana',
+	      //headers : {'Host':'www.cury.net'},
+	      //data: 'id_produto=00&nome=teste&descricao=teste%20cabana',
+	      //data: '',
+	      success: function(data){
+	        	alert("success");
+				log('success');
+				log(data);
+	           //$("#result").html('submitted successfully');
+	      },
+	      error:function(status, form, json, options){
+	            alert("failure");
+				log('failure');
+				log(status, form, json, options);
+	          //$("#result").html('there is error while submit');
+	      }   
+	    });*/
+	    $.ajax({
+                type: 'post',
+                url: '../_service/PopAtendimento.aspx',
+                //cache: false,
+                dataType: 'text',
+                //data: data,
+	      		data: 'CodEmpreendimento=52&mensagem=qwerqwerqwer&nome=qwerqwer&email=samuel%40cabanacriacao.com&ddd=12&tel=412341234',
+                //form: $('form'),
+                //methods: methods,
+                //options: options,
+                 beforeSend: function() {
+                 	log('before');
+                 },
+                error: function(data, transport) {
+                	window.console.log('data, transport');
+                	window.console.log(data, transport);
+                },
+                success: function(json) {
+                	window.console.log('json');
+                	window.console.log(json);
+                }
+            });
+        </script>
+    </body>
+</html>
