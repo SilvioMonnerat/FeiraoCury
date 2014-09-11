@@ -1,4 +1,6 @@
-<?php include ("config.php"); ?><!doctype html>
+<?php include ("config.php"); ?>
+<?php include('configExtra.php'); ?>
+<!doctype html>
 <?php 
     $title       = "Feirão de Imóveis Cury"; 
     $image       = "http://cury.net/feiraorj/images/meta.png";
@@ -65,11 +67,11 @@
 
     </head>
     <body id='top'>
-        <div class="wrapper clearfix">
         <!-- Header -->
             <?php include('header.php') ?>
-        <!-- END Header -->        
-        
+        <!-- END Header -->
+        <div class="wrapper clearfix">
+                    
         <!-- Loop -->
             <?php include('loop.php') ?>
         <!-- END Loop -->

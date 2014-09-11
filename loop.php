@@ -15,7 +15,7 @@
                         <div class="container">
                             <div class="col1">
                                 <div class="box1">
-                                    <a href="javascript:void(0)" id="ctl00_ucContato_lnkAtendimento" class="atendimentoOnline btn " onclick="window.open('http://cury.hypnobox.com.br/atendimento/index.php?id_produto=<?php echo $panel['prodID']; ?>&amp;referencia=FeiraoCuryRj','atendimentoonline','width=480, height=650');_gaq.push(['_trackEvent', 'principais', 'cliqueChat', String('<?php echo $panel['page'] ?>'), parseInt('<?php echo $panel['prodID'] ?>')]);"></a>
+                                    <a href="javascript:void(0)" id="ctl00_ucContato_lnkAtendimento" class="atendimentoOnline btn " onclick="window.open('http://curyrj.hypnobox.com.br/atendimento/index.php?id_produto=<?php echo $panel['prodID']; ?>&amp;gclid=&referencia=FeiraoCX2013','atendimentoonline','width=480, height=650');_gaq.push(['_trackEvent', 'principais', 'cliqueChat', String('<?php echo $panel['page'] ?>'), parseInt('<?php echo $panel['prodID'] ?>')]);"></a>
                                 </div><!-- end of .box1 -->
                                 <div class="box2">
                                     <a href="javascript:void(0)"  onclick="_gaq.push(['_trackEvent', 'principais', 'cliqueLigamos', String('<?php echo $panel['page'] ?>'), parseInt('<?php echo $panel['prodID'] ?>')]);" class="btn"></a>
@@ -169,4 +169,74 @@
                         </div>
                     </div>
                     <?php } ?>
+                    <?php //include('loopExtra.php'); ?>
+                    
+                    <div class="container bgExtra clearfix left">
+                    <?php foreach ($extra as $keys => $loop) { ?>
+
+                    <div class="extra clearfix" id="<?php echo $loop['page']; ?>">
+                        <h1 id="jacarepagua"><?php echo $loop['title'] ?></h1>
+                            <hr/><br />
+                            <div class="container">
+                                <div class="info">
+                                    <img src="<?php echo $imagesDir.$loop['logoSrc'] ?>" class="logoImg"/>
+                                    <p class='sizeExtra'><?php echo $loop['tamanho'] ?></p>
+                                    <p class='desc'><?php echo $loop['desc'] ?></p>
+                                </div>
+                                <?php include('sliderExtra.php'); ?>
+                            </div>
+                                <h2>NÃO PERCA ESSA GRANDE CHANCE E CADASTRE-SE ABAIXO.</h2>
+                            <div class="areaCadastro">
+                                <div class="areaForm formulario">
+                                    <form action="" method='post'  id='form-ig'>
+                                        <input type="hidden" name='CodEmpreendimento' value='<?php echo $loop['emailProdID'] ?>'/>
+                                        <input type="text" name='Assunto' style="display:none" value='Info'/>
+                                            <span class='normal nome'><input type="text" name='Nome' class='validate[required,custom[onlyLetterSp],maxSize[100]]' placeholder='Nome'/></span>
+                                            <span class='normal email'><input type="text" name='Email' class='validate[required,custom[email],maxSize[100]]' placeholder='Email'/></span>
+                                            <span class='normal fone'><input type="text" name='Tel' maxlength='9' minlength='8' class='validate[required,custom[onlyNumberSp],maxSize[9],minSize[8]]' placeholder='Telefone'/></span>
+                                            <input type="hidden" name='Mensagem' class='messagem validate[required,minSize[10]]' placeholder='Mensagem' >
+                                        <input type="submit" name='enviar' value='' class="btn" onclick="_gaq.push(['_trackEvent', 'principais', 'cliqueMensagem', String('<?php echo $loop['page'] ?>'), parseInt('<?php echo $loop['emailProdID'] ?>')]);curName = '<?php echo $loop['page'] ?>'; curID = '<?php echo $loop['emailProdID'] ?>';">
+                                    </form>
+                                    <script>
+                                    $(document).ready(function() {
+
+                                        jQuery("#form-ig").validationEngine({
+                                            ajaxFormValidation: false,
+                                            ajaxSubmit: false,
+                                        }).submit(function(){
+                                            if(!$('#form-ig').data().jqv.isError){
+                                                $.ajax({
+                                                    type: 'post',
+                                                    url: '../_service/PopAtendimentoEmail.aspx',
+                                                    dataType: 'text',
+                                                    data: jQuery("#form-ig").serialize(),
+                                                     beforeSend: function() {
+                                                        log('enviar estes dados para ../_service/PopAtendimentoEmail.aspx', jQuery("#form-ig").serialize());
+                                                     },
+                                                    error: function(data, transport) {
+                                                        /*window.console.log('data, transport');
+                                                        window.console.log(data, transport);*/
+                                                        alert("Erro ao enviar Mensagem!");
+                                                    },
+                                                    success: function(r) {
+                                                        log(r);
+                                                        if(r == 'sucesso') {
+                                                           alert("Sua mensagem foi enviada para nossa equipe com sucesso!");
+                                                           _gaq.push(['_trackEvent', 'principais', 'cliqueMensagemSUCESSO', String('<?php echo $loop['page'] ?>'), parseInt('<?php echo $loop['emailProdID'] ?>')]);
+                                                        } else {
+                                                            alert("Erro ao enviar Mensagem!");
+                                                        }
+                                                    }
+                                                });
+                                            }
+                                            return false;
+                                        });
+                                     });
+                                    </script>
+                                </div>
+                            </div>
+                    </div>
+
+                    <?php } ?>
+                    </div>
                 </div>

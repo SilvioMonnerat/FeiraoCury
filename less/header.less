@@ -1,4 +1,4 @@
-#header {z-index: 10; height: 573px;}
+#header {z-index: 10; height: 573px; width: 100%;}
 #gotoTop {
 	position: absolute;
 	width: 40px;
@@ -11,14 +11,34 @@
 		display: block;
 	}
 }
+.faixaLeft{
+	float: left;
+	position: relative;
+	background: url(../images/faixaLeft.jpg) repeat-x left;
+	height: 172px;
+	width: 30%;
+	top: 216px;
+	z-index: 1;
+	}
+.faixaRight{
+	position: relative;
+	background: url(../images/faixaRight.jpg) repeat-x right;
+	height: 165px;
+	float: right;
+	width: 30%;
+	top: 236px;
+	z-index: 1;
+}
 header{
 	.img-header{
-		background: url(../images/img-header.png);
-		width: 782px;
-		height: 388px;
+		background: url(../images/img-header.png) no-repeat;
+		width: 810px;
+		height: 401px;
 		text-indent: -999999px;
 		border: 0 none;
 		margin: 0 auto;
+		z-index: 99;
+		position: relative;
 	}
 	.bg-menu{
 		position: relative;
@@ -31,15 +51,27 @@ header{
 			li{
 				background: url(../images/bgmenu.png);
 				height: 155px;
-				width: 118px; 
+				width: 137px; 
 				display: inline-block;
 				text-decoration: none;
-				margin: 0 -3px;
+				margin: 0 -1.4px 0 -3px;
+				float: left;
+				padding: 0 2px 0 0;
 				.menu-img{
 					background: top center;
 					height: 52px;
 					width: 97px;
-					margin: 15px 10px 5px;
+					margin: 15px 18px 5px;
+					position: relative;
+				}
+				.img{
+					background: top center;
+					height: 155px;
+					width: 135px;
+					position: relative;
+					z-index: 999;
+					float: right;
+					top: -72px;
 				}
 				p {
 					
@@ -75,8 +107,17 @@ header{
 					line-height: 15px;
 					
 				}
+				.link-menuExtra{
+					margin:10px 10px 16px;
+					text-align: center;
+					background: #666666;
+					padding: 0 5px;
+										
+				}
 			}
 		}	
 	}
 
 }
+
+

@@ -5,6 +5,12 @@
 	border-bottom: none;
 	margin-top: -40px;
 }
+.bgExtra{
+	background: url(../images/bgExtra.png) repeat;
+	border-bottom: 0;
+	margin-top: 40px;
+	margin-bottom: 50px;
+}
 .panel {
 	width: 755px;
 	margin: auto;
@@ -25,6 +31,82 @@
 		font-size: 20px;
 		color: #c61d23;
 		margin: 7px 0;
+	}
+}
+.extra{
+	width: 755px;
+	margin: auto;
+	hr {
+		//width: 100%;
+		margin: auto;
+	}
+	h1 {
+		font-weight: 700;
+		font-family: 'PT Sans Narrow';
+		font-size: 34px;
+		color: #74307c;
+		margin: .5em;
+	}
+	h2 {
+		font-family: 'goth720b';
+		font-size: 14px;
+		color: #74307c;
+		margin: -10px 10px;
+		position: relative;
+		top: 28px;
+	}
+	.areaCadastro{
+		width: 810px;
+		height: 110px;
+		background: rgba(0,0,0,0.1);
+		margin-left: -29px;
+		padding: 50px 0;
+		.areaForm{
+			background: url(../images/bg-cadastro.png) no-repeat;
+			width: 740px;
+			height: 140px;
+			margin: 0 auto;
+			input[type=submit] {
+				width: 122px;
+				height: 31px;
+				background-image: url('../images/bt_cadastrar.png');
+				background-color: transparent;
+				cursor: pointer;
+				float: right;
+				margin: 15px 30px;
+			}
+			.normal {
+				width: 215px;
+				margin-left: 20px;
+				margin-top: 25px;
+				display: inline-block;
+				input {
+					height: 30px;
+					width: 205px;
+					padding-left: 10px;
+				}
+				&.nome {
+					//margin-bottom: 20px;
+				}
+				&.email {
+					//margin-bottom: 19px;
+				}
+				&.fone {
+					/*float: left;*/
+					text-align: center;
+				}
+			}
+			input {
+				resize:none;
+				border: 1px solid #c4c4c4;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+				color: #999;
+				font-style: italic;
+
+			}
+		}
 	}
 }
 .seloImg{
@@ -52,6 +134,20 @@
 			font-size: 45px;
 			font-family: 'goth720b';
 		}
+		
+	}
+	.sizeExtra {
+		color: #74307c;
+		font-size: 30px;
+		font-weight: 400;
+		font-family: 'PT Sans Narrow';
+		margin: 7px 0;
+		strong {
+			font-size: 700;
+			font-size: 45px;
+			font-family: 'goth720b';
+		}
+		
 	}
 	.desc {
 		font-family: 'PT Sans Narrow';
